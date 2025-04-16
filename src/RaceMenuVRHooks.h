@@ -103,7 +103,7 @@ namespace RaceMenuVRHooks
 
 	namespace FileLookupHooks
 	{
-		std::string GetFormIdentifier(char* extraOutput, RE::TESForm* form)
+		std::string GetFormIdentifier(RE::TESForm* form)
 		{
 			char formName[MAX_PATH];
 			std::uint8_t modIndex = form->formID >> 24;
@@ -120,7 +120,6 @@ namespace RaceMenuVRHooks
 			if (modInfo) {
 				sprintf_s(formName, "%s|%06X", modInfo->fileName, modForm);
 			}
-			strncpy(extraOutput,formName,strlen(formName));
 			return formName;
 		}
 
