@@ -120,7 +120,7 @@ namespace RaceMenuVRHooks
 			if (modInfo) {
 				sprintf_s(formName, "%s|%06X", modInfo->fileName, modForm);
 			}
-			strncpy(extraOutput,formName,strlen(formName));)
+			strncpy(extraOutput,formName,strlen(formName));
 			return formName;
 		}
 
